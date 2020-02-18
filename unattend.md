@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CoffeeCodeRepe.at
+permalink: /unattend/
 ---
 
 <div id="unattend">
