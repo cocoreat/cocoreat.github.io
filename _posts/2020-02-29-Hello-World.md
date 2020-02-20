@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Hello World
+date: YYYY-MM-DD hh:mm:ss -0000
+categories: Project HomeLab
 ---
 
 {{ page.title }}
