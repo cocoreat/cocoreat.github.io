@@ -2,7 +2,8 @@
 layout: post
 title: Hello World
 date: YYYY-MM-DD hh:mm:ss -0000
-categories: project homelab
+category: project
+tags: [homelab, windows]
 ---
 
 {{ page.title }}
