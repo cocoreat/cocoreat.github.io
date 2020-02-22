@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World
-date: 2020-02-29 00:00:00 -0000
+date: 2020-02-29 12:00:00+0100
 category: project
 tags: [homelab, windows]
 ---

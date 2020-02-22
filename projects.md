@@ -10,5 +10,5 @@ permalink: /projects/
   {% for post in site.categories.project %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-</ul>
+  </ul>
 </div>
