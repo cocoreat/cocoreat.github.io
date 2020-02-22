@@ -4,21 +4,9 @@ title: CoffeeCodeRepe.at
 ---
 
 <div id="home">
-  <h1>Thoughts of a Sysadmin</h1>
+  <h1>Recent Entries</h1>
   <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  <h1>Spare Time Projects</h1>
-  <ul class="posts">
-    <li><span>02 Apr 2005</span> &raquo; <a href="https://web.archive.org/web/20061214040137/http://joshuaink2006.johnoxton.co.uk/blog/240/seven-and-a-half-questions-for-tom-werner">JoshuaInk: Seven and a half questions for Tom Werner</a></li>
-  </ul>
-
-  <h1>Unattended Installations</h1>
-  <ul class="posts">
-    {% for post in site.unattend %}
+    {% for post in site.posts limit:15 %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>

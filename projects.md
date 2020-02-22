@@ -6,9 +6,9 @@ permalink: /projects/
 
 <div id="projects">
   <h1>HomeLab (ongoing)</h1>
-  <ul>
+  <ul class="posts">
   {% for post in site.categories.project %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
   </ul>
 </div>
