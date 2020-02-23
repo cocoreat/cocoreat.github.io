@@ -133,13 +133,13 @@ ul.posts {
       }
 
     .site .footer .rss {
-      object-fit: contain;
       margin-top: auto;
       margin-right: auto;
       float: right;
     }
 
       .site .footer .rss img {
+        object-fit: contain;
         border: 0;
       }
 
