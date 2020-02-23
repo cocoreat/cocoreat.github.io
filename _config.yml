@@ -1,2 +1,4 @@
+encoding: utf-8
+timezone: Europe/Vienna
 plugins:
   - jekyll-feed
