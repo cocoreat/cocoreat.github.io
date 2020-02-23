@@ -1,9 +1,9 @@
 # This is the data for my blog
 
-The foundation is based on [Tom Preston-Werner's personal blog](http://github.com/jekyll/jekyll/), which is also 
+The foundation is based on [Tom Preston-Werner's personal blog](https://github.com/mojombo/mojombo.github.io), which is also 
 hosted here at Github.
 
-It is automatically transformed by [Jekyll](http://github.com/mojombo/jekyll)
+It is automatically transformed by [Jekyll](http://github.com/jekyll/jekyll/)
 into a static site whenever I push this repository to GitHub.
 
 ## License
