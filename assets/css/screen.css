@@ -139,7 +139,8 @@ ul.posts {
     }
 
       .site .footer .rss img {
-        object-fit: contain;
+        height: 64px;
+        width: 64px;
         border: 0;
       }
 
