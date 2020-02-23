@@ -14,7 +14,10 @@ tags: [homelab, windows]
 Hello World!
 
 ```cmd
-msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c 
+msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c 
+msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c 
+msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c msiexec.exe /c 
+msiexec.exe /c msiexec.exe /c 
 ```
 
 <img src="/assets/img/posts/2020-02-29/captcha-bugs.jpg">
