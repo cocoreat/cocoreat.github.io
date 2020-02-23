@@ -133,8 +133,8 @@ ul.posts {
       }
 
     .site .footer .rss {
-      margin-top: auto;
-      margin-right: auto;
+      margin-top: 1em;
+      margin-right: 1em;
       float: right;
     }
 
