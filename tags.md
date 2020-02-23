@@ -6,6 +6,8 @@ permalink: /tags/
 
 <div id="tags">
 
+  <h1>All Entries (sorted by tags)</h1>
+
   {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
