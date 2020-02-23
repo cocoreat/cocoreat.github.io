@@ -133,8 +133,7 @@ ul.posts {
       }
 
     .site .footer .rss {
-      height: 64px;
-      width: 64px;
+      object-fit: contain;
       margin-top: auto;
       margin-right: auto;
       float: right;
