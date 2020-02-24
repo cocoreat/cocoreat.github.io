@@ -13,7 +13,7 @@ tags: [introduction]
 
 What's this mess about?
 
-Basically this is just a place for me to dump some thoughts (sometimes in german). Most of it will be related to my job as sys-admin with a focus on endpoint management (mainly Windows, but also a bit of Linux - probably even MacOS). 
+Basically this is just a place for me to dump some thoughts (sometimes in german). Most of it will be related to my job as sys-admin with a focus on endpoint management (mainly Windows, but also a bit of Linux - probably even MacOS).
 
 I'll try to provide some (hopefully helpful) insights into operating system and software deployment using [Microsoft Endpoint Manager (MEM)](https://www.microsoft.com/en-us/microsoft-365/microsoft-endpoint-manager), as well as about IT-security and data-privacy related topics. I'll also recap some stuff that I've done in my master programme at the faculty of computer science [@UNIVIE](https://www.univie.ac.at/). Maybe I'll give some insight into projects I'm doing at home in my spare time.
 
