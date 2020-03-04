@@ -11,7 +11,7 @@ tags: [active directory, service accounts]
 
 <p class="meta">Published: 04 Mar 2020</p>
 
-I had to set up a service account in AD for one specific application, which was running on just one server. I've decided to write this process down, because if you're searching for "Managed Service Accounts" (MSA) you're first results will most probably be about ["Group Managed Service Account (gMSA)"](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview), which is basically an evolved form of service accounts (and too complex for my needs in this case).
+I had to set up a service account in AD for one specific application, which was running on just one server. I've decided to write this process down, because if you're searching for "Managed Service Accounts" (MSA) your first results will most probably be about ["Group Managed Service Account (gMSA)"](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview), which is basically an evolved form of service accounts (and too complex for my needs in this case).
 
 So, let's start. In order to create a MSA in AD, I use the following Powershell-Cmdlet. Please notice the parameter *RestrictToSingleComputer*, which will make it an ordinary MSA.
 ```powershell
