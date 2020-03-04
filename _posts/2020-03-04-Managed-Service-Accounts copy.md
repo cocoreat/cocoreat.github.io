@@ -20,7 +20,7 @@ New-ADServiceAccount -Name MSA-Name -RestrictToSingleComputer -Enabled $true
 
 To bind the newly created MSA to a computer, we'll run the following Cmdlet.
 ```powershell
-Add-ADComputerServiceAccount Computer-Name -ServiceAccount MSA-Name
+Add-ADComputerServiceAccount -Identity Computer-Name -ServiceAccount MSA-Name
 ```
 
 In order to use the MSA on the computer we've just specified, it needs to be installed there. This is done by running the following Cmdlet on the computer, where it should be installed.
