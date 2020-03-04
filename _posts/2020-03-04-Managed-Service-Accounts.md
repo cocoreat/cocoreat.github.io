@@ -29,8 +29,7 @@ Install-ADServiceAccount -Identity MSA-Name
 ```
 
 Now you can run a service on this computer in context of the MSA. Just open the service's properties and navigate to the *Log on* tab. The MSA needs to be entered in the following form: *domain\<MSA-Name>$*
-The password fields need to be left empty. On clicking *Apply* or *OK* you'll get a warning, that the MSA got the permission to log on as a service. 
-
+The password fields need to be left empty. On clicking *Apply* or *OK* you'll get a warning, that the MSA got the permission to log on as a service.
 <br>
 
 Related Readings
