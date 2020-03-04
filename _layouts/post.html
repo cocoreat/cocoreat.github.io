@@ -7,7 +7,7 @@ layout: default
     Published: {{ page.date | date_to_string}}
     <br>
     {% assign words = content | number_of_words %}
-    Est. reading time: 
+    Reading time: 
     {% if words < 360 %}
       1 min
     {% else %}
