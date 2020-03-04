@@ -35,6 +35,7 @@ The password fields need to be left empty. On clicking *Apply* or *OK* you'll ge
 
 Related Readings
 ================
-* [New-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/new-adserviceaccount)
-* [Add-ADComputerServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/add-adcomputerserviceaccount)
-* [Install-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/Install-ADServiceAccount)
+
+&raquo; [New-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/new-adserviceaccount)
+&raquo; [Add-ADComputerServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/add-adcomputerserviceaccount)
+&raquo; [Install-ADServiceAccount](https://docs.microsoft.com/en-us/powershell/module/activedirectory/Install-ADServiceAccount)
