@@ -4,15 +4,14 @@ layout: default
 <div id="post">
   <h2>{{ page.title }}</h2>
   <p class="meta">
-    Published: {{ page.date | date_to_string}}
-    <br>
+    Published: {{ page.date | date_to_string}} | 
     {% assign words = content | number_of_words %}
-    Reading time: 
     {% if words < 360 %}
       1 min
     {% else %}
       {{ words | divided_by:180 }} mins
     {% endif %}
+    reading time
   </p>
   {{ content }}
 </div>
