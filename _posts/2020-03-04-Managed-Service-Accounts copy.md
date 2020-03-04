@@ -15,17 +15,17 @@ I had to set up a service account in AD for one specific application, which was 
 
 So, let's start. In order to create a MSA in AD, I use the following Powershell-Cmdlet. Please notice the parameter *RestrictToSingleComputer*, which will make it an ordinary MSA.
 ```powershell
-New-ADServiceAccount -Name <MSA-Name> -RestrictToSingleComputer -Enabled $true
+New-ADServiceAccount -Name MSA-Name -RestrictToSingleComputer -Enabled $true
 ```
 
 To bind the newly created MSA to a computer, we'll run the following Cmdlet.
 ```powershell
-Add-ADComputerServiceAccount <Computer-Name> -ServiceAccount <MSA-Name>
+Add-ADComputerServiceAccount Computer-Name -ServiceAccount MSA-Name
 ```
 
 In order to use the MSA on the computer we've just specified, it needs to be installed there. This is done by running the following Cmdlet on the computer, where it should be installed.
 ```powershell
-Install-ADServiceAccount -Identity <MSA-Name>
+Install-ADServiceAccount -Identity MSA-Name
 ```
 
 Now you can run a service on this computer in context of the MSA. Just open the service's properties and navigate to the *Log on* tab. The MSA needs to be entered in the following form: *domain\<MSA-Name>$*
