@@ -4,9 +4,10 @@ layout: default
 <div id="post">
   <h2>{{ page.title }}</h2>
   <p class="meta">
-    Published on {{ page.date | date_to_string}}
+    Published: {{ page.date | date_to_string}}
     <br>
     {% assign words = content | number_of_words %}
+    Estimated reading time: 
     {% if words < 360 %}
       1 min
     {% else %}
