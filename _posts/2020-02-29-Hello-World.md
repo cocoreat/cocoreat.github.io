@@ -1,15 +1,9 @@
 ---
 layout: post
 title: Hello World
-date: 2020-02-29 12:00:00+0100
 category: thoughts
 tags: [about]
 ---
-
-{{ page.title }}
-================
-
-<p class="meta">Published: 29 Feb 2020</p>
 
 What's this mess about?
 
