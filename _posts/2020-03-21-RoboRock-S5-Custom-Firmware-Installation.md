@@ -79,10 +79,10 @@ And there is now another project on Github, where you can get pre-compiled firmw
 Related Readings
 ================
 
-&raquo; [DustCloud](https://github.com/dgiese/dustcloud)
+&raquo; [DustCloud](https://github.com/dgiese/dustcloud)  
 &raquo; [DustBuilder](https://builder.dontvacuum.me/)  
-&raquo; [DustBuilder (old URL)](https://dustbuilder.xvm.mit.edu/)
-&raquo; [Valetudo RE](https://github.com/rand256/valetudo)
-&raquo; [RoboRock Control Center](https://github.com/LazyT/rrcc)
-&raquo; [Voice packages](https://dustbuilder.xvm.mit.edu/pkg/voice/)
-&raquo; [Firmware builder by zvldz](https://github.com/LazyT/rrcc)
+&raquo; [DustBuilder (old URL)](https://dustbuilder.xvm.mit.edu/)  
+&raquo; [Valetudo RE](https://github.com/rand256/valetudo)  
+&raquo; [RoboRock Control Center](https://github.com/LazyT/rrcc)  
+&raquo; [Voice packages](https://dustbuilder.xvm.mit.edu/pkg/voice/)  
+&raquo; [Firmware builder by zvldz](https://github.com/LazyT/rrcc)  
