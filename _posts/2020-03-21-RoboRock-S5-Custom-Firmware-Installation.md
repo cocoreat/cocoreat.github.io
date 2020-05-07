@@ -84,5 +84,5 @@ Related Readings
 &raquo; [DustBuilder (old URL)](https://dustbuilder.xvm.mit.edu/)  
 &raquo; [Valetudo RE](https://github.com/rand256/valetudo)  
 &raquo; [RoboRock Control Center](https://github.com/LazyT/rrcc)  
-&raquo; [Voice packages](https://dustbuilder.xvm.mit.edu/pkg/voice/)  
-&raquo; [Firmware builder by zvldz](https://github.com/LazyT/rrcc)  
+&raquo; [Firmware builder by zvldz](https://github.com/zvldz/vacuum)  
+&raquo; [Voice packages](https://dustbuilder.xvm.mit.edu/pkg/voice/) 
