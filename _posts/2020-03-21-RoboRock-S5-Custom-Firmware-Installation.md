@@ -13,7 +13,8 @@ Therefore I was buying a RoboRock S5 after checking that it allows the installat
 
 I'll quickly go through the necessary steps:
 
-**Extract security token**
+Extract security token
+======================
 
 Before anything else, we need to make sure that we can actually communicate with our robot. For this to work we need to extract a token, which the robot is using to communicate to its app. 
 
@@ -23,12 +24,15 @@ Once you have the app, log in with your Mi-Account (or create one if you haven't
 
 The advantage of using the old version of the app: You can access the app's log files on your phone. Just open your file browser and find the *SmartHome/logs/plug_DeviceManager* folder. After connecting to your robot successfully, search for the token string in the most recent log file. It will look something like this:
 ```json
-SmartHome 328:[DEBUG]-03-21 15:18:38.177 processResult in result={"code":0,"message":"ok","result":{"list":[{"did":"261921897","token":"35774d584b45777143634964304c6c6a", ...
+SmartHome 328:[DEBUG]-03-21 15:18:38.177 processResult in result=
+{"code":0,"message":"ok","result":{"list":[{"did":"261921897",
+"token":"35774d584b45777143634964304c6c6a", ...
 ```
 
 If there are no log files, then either you've the wrong version of the app, or you'll need to start a vacuum clean first.
 
-**Build custom firmware image**
+Build custom firmware image
+===========================
 
 You can either go to the [DustCloud Github-Repo](https://github.com/dgiese/dustcloud), clone it and follow the build instructions to build the firmware image yourself, or you can trust the developer and let him build the image for you by using [DustBuilder](https://builder.dontvacuum.me/). I was using DustBuilder. 
 
@@ -42,17 +46,18 @@ I also recommend to include [Valetudo RE](https://github.com/rand256/valetudo) i
 
 Once you submitted your build request, you can grab a cup of coffee. It can take a while until it is mailed to you.
 
-**Install custom firmware image**
+Install custom firmware image
+=============================
 
 After getting your E-mails from DustBuilder, downloading the image and verifying its hash, you can finally install it.
 
 For flashing the firmware image I was using the [RoboRock Control Center](https://github.com/LazyT/rrcc). The application is pretty self-explanatory: After starting the application the first time, you'll be prompted to connect to your robot. All you need is its IP and the token we've extracted earlier.
 
-![RoboRock Control Center Connection](/assets/img/posts/2020-03-21/rrcc-088-01.JPG)
+![RRCC Connection](/assets/img/posts/2020-03-21/rrcc-v088-01.JPG)
 
 Once we've connected successfully, navigate to the firmware menu item and click on update. You'll hear the robot announcing the start and the end of the firmware update. The update can take quite long (up to 10 minutes). So just wait for it to finish. 
 
-![RoboRock Control Center Connection](/assets/img/posts/2020-03-21/rrcc-088-02.JPG)
+![RRCC Connection](/assets/img/posts/2020-03-21/rrcc-v088-02.JPG)
 
 Once the custom firmware was installed successfully, you can access the Valetudo web interface by navigating to the robot's IP in a web browser.
 
