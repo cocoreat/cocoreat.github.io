@@ -72,9 +72,14 @@ My robot resetted itself to factory settings. That is a known bug when using cus
 
 Let's see if it helps. 
 
-Oh, and if you are searching for voice packs, you'll find them here: https://dustbuilder.xvm.mit.edu/pkg/voice/
+Oh, and if you are searching for voice packs, you'll find them here: [https://dustbuilder.xvm.mit.edu/pkg/voice/](https://dustbuilder.xvm.mit.edu/pkg/voice/)
 
-And there is now another project on Github, where you can get pre-compiled firmware images: https://github.com/zvldz/vacuum
+And there is now another project on Github, where you can get pre-compiled firmware images: [https://github.com/zvldz/vacuum](https://github.com/zvldz/vacuum)
+
+Update 2020-09-07
+=================
+
+FYI: The experimental patch, which I've included in the last build of the firmware image is still working.
 
 Related Readings
 ================
