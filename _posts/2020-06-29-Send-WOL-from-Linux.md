@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move SSH-keys to WSL2
+title: Send WOL from Linux
 category: thoughts
 tags: [Linux]
 ---
@@ -17,7 +17,7 @@ crontab -e
 ```
 
 Then add the command with the according schedule on the first five columns:
-```text
+```
 # m h  dom mon dow   command
 # minute(0-59) hour(0-23) day(1-31) month(1-12) weekday(0-6) command
 0 0 * * * wakeonlan -i 192.168.1.255 aa:11:bb:22:cc:33
