@@ -19,6 +19,7 @@ title: CoffeeCodeRepe.at
 
   <h1>How to do things</h1>
   <ul class="posts">
+    <li><a href="https://docs.microsoft.com/en-us/windows-server/get-started-19/vm-activation-19">Automatic virtual machine activation</a></li>
     <li><a href="https://www.hanselman.com/blog/HowToRemoteDesktopFullscreenRDPWithJustSOMEOfYourMultipleMonitors.aspx">How to remote desktop fullscreen RDP with just SOME of your multiple monitors</a></li>
     <li><a href="https://dpowershell.blogspot.com/2015/11/this-blog-is-going-to-serve-as-my.html">Merging Word QAT/UI Customizations with PowerShell</a></li>
     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56846">Windows Command Reference</a></li>

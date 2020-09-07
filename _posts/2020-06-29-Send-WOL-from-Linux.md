@@ -2,7 +2,7 @@
 layout: post
 title: Send WOL from Linux
 category: thoughts
-tags: [Linux]
+tags: [linux]
 ---
 
 I wanted to wake up one of my servers regularly by sending a Wake-On-Lan (WOL) Magic Packet from a Raspberry Pi running Ubuntu 20.04 LTS. I'm using the program "wakeonlan" to send a magic packet:

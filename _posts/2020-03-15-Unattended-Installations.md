@@ -2,7 +2,7 @@
 layout: post
 title: Unattended Installations
 category: unattend
-tags: [About]
+tags: [about]
 ---
 
 I wanted to wake up one of my servers regularly by sending a Wake-On-Lan (WOL) Magic Packet from a Raspberry Pi running Ubuntu 20.04 LTS. I'm using the program "wakeonlan" to send a magic packet:

@@ -2,7 +2,7 @@
 layout: post
 title: Batch Create AD User Accounts
 category: thoughts
-tags: [Active Directory, PowerShell]
+tags: [active directory, powershell]
 ---
 
 I had to create quite a lot of AD user accounts. To facilitate the task, I've used the PowerShell according to [instructions from the TechNet-Community](https://social.technet.microsoft.com/wiki/contents/articles/25111.creating-batch-users-in-active-directory-using-powershell.aspx).
