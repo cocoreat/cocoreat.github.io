@@ -12,6 +12,7 @@ FYI: The experimental patch, which I've included in the last build of the firmwa
 
 ---
 
+
 Update 2020-05-07
 =================
 
@@ -26,6 +27,10 @@ Oh, and if you are searching for voice packs, you'll find them here: [https://du
 And there is now another project on Github, where you can get pre-compiled firmware images: [https://github.com/zvldz/vacuum](https://github.com/zvldz/vacuum)
 
 ---
+
+
+Initial Post 2020-03-21
+=======================
 
 I wanted to get a vacuum cleaner robot for some time now. Actually, I've already owned one more than a decade ago. But it was a silly one, which was just changing direction when it bumped into something. After some of the sensors broke (which unfortunately couldn't be fixed easily) I was putting the topic aside.
 
