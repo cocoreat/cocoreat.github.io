@@ -5,33 +5,6 @@ category: projects
 tags: [homelab, iot]
 ---
 
-Update 2020-09-07
-=================
-
-FYI: The experimental patch, which I've included in the last build of the firmware image is still working.
-
---- 
-&nbsp;
-
-Update 2020-05-07
-=================
-
-My robot resetted itself to factory settings. That is a known bug when using custom firmwares. So this time when building the firmware image, I've enabled an experimental patch for it. These are my current settings:
-
-![DustBuilder Settings](/assets/img/posts/2020-05-07/dustbuilder-settings.JPG)
-
-Let's see if it helps. 
-
-Oh, and if you are searching for voice packs, you'll find them here: [https://dustbuilder.xvm.mit.edu/pkg/voice/](https://dustbuilder.xvm.mit.edu/pkg/voice/)
-
-And there is now another project on Github, where you can get pre-compiled firmware images: [https://github.com/zvldz/vacuum](https://github.com/zvldz/vacuum)
-
----
-&nbsp;
-
-Original Post 2020-03-21
-=======================
-
 I wanted to get a vacuum cleaner robot for some time now. Actually, I've already owned one more than a decade ago. But it was a silly one, which was just changing direction when it bumped into something. After some of the sensors broke (which unfortunately couldn't be fixed easily) I was putting the topic aside.
 
 Nowadays smart vacuum cleaners have fancy laser sensors, which allow them to navigate quickly through a room. The downside is, that in order to use all features you've to connect your device to some cloud where all the information (e.g. the layout of your apartment) is stored.
@@ -89,6 +62,24 @@ Once we've connected successfully, navigate to the firmware menu item and click 
 Once the custom firmware was installed successfully, you can access the Valetudo web interface by navigating to the robot's IP in a web browser.
 
 That's it.
+
+Update 2020-05-07
+=================
+
+My robot resetted itself to factory settings. That is a known bug when using custom firmwares. So this time when building the firmware image, I've enabled an experimental patch for it. These are my current settings:
+
+![DustBuilder Settings](/assets/img/posts/2020-05-07/dustbuilder-settings.JPG)
+
+Let's see if it helps. 
+
+Oh, and if you are searching for voice packs, you'll find them here: [https://dustbuilder.xvm.mit.edu/pkg/voice/](https://dustbuilder.xvm.mit.edu/pkg/voice/)
+
+And there is now another project on Github, where you can get pre-compiled firmware images: [https://github.com/zvldz/vacuum](https://github.com/zvldz/vacuum)
+
+Update 2020-09-07
+=================
+
+FYI: The experimental patch, which I've included in the last build of the firmware image is still working.
 
 Related Readings
 ================
