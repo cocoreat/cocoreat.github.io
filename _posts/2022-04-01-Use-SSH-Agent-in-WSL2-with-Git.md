@@ -29,9 +29,10 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/id_ed25519.pub
 chmod 600 /path/to/other/key/file
-```  
-  
-## SSH config
+```
+
+SSH config
+----------
 
 Next, we're editing our `~/.ssh/config`. We're adding the host that we want to connect to, as well as the preffered authentication mode and the path to our private key:
 
@@ -47,8 +48,9 @@ We can now test if our SSH setup is working by manually starting the SSH-agent a
 ```bash
 eval $(ssh-agent -s)
 ssh -T git@github.com
-```  
+```
 
+&nbsp;
 ## SSH-agent persistence
 
 However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^4][^5], which we probably need to install first:
