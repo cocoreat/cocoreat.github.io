@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Send WOL from Linux
+title: Use SSH Agent in WSL2 with Git
 category: thoughts
 tags: [linux, wsl, ssh, git]
 ---
 
-No, this is no April Fools' Day joke. Instead I'll show you how to correctly set-up the SSH-agent in the Windows-Subsystem for Linux. Like most of my posts, this is more a reminder to myself on how to do it.
+No, this is no April Fools' Day joke. Instead I'll show you how to correctly set-up the SSH-agent in the Windows-Subsystem for Linux as it can be a bit tricky. Like most of my posts, this is more a reminder to myself on how to do it.
 
 I wanted to wake up one of my servers regularly by sending a Wake-On-Lan (WOL) Magic Packet from a Raspberry Pi running Ubuntu 20.04 LTS. I'm using the program "wakeonlan" to send a magic packet:
 
