@@ -58,11 +58,11 @@ sudo apt-get install keychain
 Then let's open our `~/.bashrc` and add the following line to the end of the file:
 
 ```text
-# GitHub
-Host github.com
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/id_ed25519
+# Autostart SSH-Agent by using keychain
+eval ``keychain --agents ssh id_ed25519``
 ```
+
+If you now open the terminal the first time after a reboot, the SSH-agent will be started and the according SSH key will be added. If the SSH key is protected by a passphrase, you'll have to enter it only on first launch. The session of the SSH-agent will persist if you close the terminal or open an additional one.
 
 [^1]: [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation)
 [^2]: [Resolving hangs when doing a Git push or sync from WSL](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-hangs-when-doing-a-git-push-or-sync-from-wsl)
