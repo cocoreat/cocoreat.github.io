@@ -49,7 +49,6 @@ We can now test if our SSH setup is working by manually starting the SSH-agent a
 eval $(ssh-agent -s)
 ssh -T git@github.com
 ```
-
 &nbsp;
 ## SSH-agent persistence
 
