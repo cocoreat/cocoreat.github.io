@@ -29,9 +29,7 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/id_ed25519.pub
 chmod 600 /path/to/other/key/file
-```  
-
-&nbsp;
+```
 
 ## SSH config
 
