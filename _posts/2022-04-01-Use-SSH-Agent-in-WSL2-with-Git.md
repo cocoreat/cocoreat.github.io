@@ -12,9 +12,9 @@ Generate SSH key
 
 First of all, we'll need to generate a pair of SSH keys[^1]. So we run the following command in bash to create an SSH key-pair using the Ed25519-algorithm:
 
-```bash
+~~~bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
-```  
+~~~  
 
 You will be prompted for a passphrase. Although setting a passphrase is recommended for most scenarios, there are some problems with it if you're using Git in WSL2 with SSH via Visual Studio Code, e.g. the GUI-buttons in the "Source Control"-Tab for syncing a repo will not work proberly. Therefore, the VS Code developers recommend either using the command line for pulling/pushing, removing the passphrase from the SSH key or use HTTPS for cloning[^2].
 As this is my setup, I'll deliberately NOT set a passphrase. However, I'll recommend reading the following article on this topic: [Is it okay to use a SSH key with an empty passphrase?](https://serverfault.com/questions/142959/is-it-okay-to-use-a-ssh-key-with-an-empty-passphrase/142963#142963).
@@ -26,47 +26,51 @@ Fix permissions
 
 As also pointed out in the article about sharing SSH keys, the SSH-agent is very picky about local file and folder permissions. So make sure that they are set correctly[^3]:
 
-```bash
+~~~bash
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/id_ed25519.pub
 chmod 600 /path/to/other/key/file
-```
-  
+~~~
+
+However, permissions shouldn't be an issue if you've created the SSH keys within WSL.
+
 SSH config
 ----------
 
 Next, we're editing our `~/.ssh/config`. We're adding the host that we want to connect to, as well as the preffered authentication mode and the path to our private key:
 
-```text
+~~~text
 # GitHub
 Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_ed25519
-```
+~~~
 
 We can now test if our SSH setup is working by manually starting the SSH-agent and testing the connection to GitHub:
 
-```bash
+~~~bash
 eval $(ssh-agent -s)
 ssh -T git@github.com
-```
- 
+~~~
+
+If everything is setup correctly, you'll get a message that you've successfully authenticated.
+
 SSH-agent persistence
 ---------------------
 
 However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^4][^5], which we probably need to install first:
 
-```bash
+~~~bash
 sudo apt-get install keychain
-```
+~~~
 
 Then let's open our `~/.bashrc` and add the following line to the end of the file:
 
-```text
+~~~text
 # Autostart SSH-Agent by using keychain
 eval ``keychain --agents ssh id_ed25519``
-```
+~~~
 
 If you now open the terminal the first time after a reboot, the SSH-agent will be started and the according SSH key will be added. If the SSH key is protected by a passphrase, you'll have to enter it only on first launch. The session of the SSH-agent will persist if you close the terminal or open an additional one.
 
