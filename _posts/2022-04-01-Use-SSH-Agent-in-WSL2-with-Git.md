@@ -5,7 +5,7 @@ category: thoughts
 tags: [linux, wsl, ssh, git]
 ---
 
-No, this is no April Fools' Day joke. Instead I'll show you how to correctly set-up the SSH-agent in the Windows-Subsystem for Linux as it can be a bit tricky. Like most of my posts, this is more a reminder to myself on how to do it.
+No, this is no April Fools' Day joke. Instead I'll show you how to correctly set-up the SSH-agent in the Windows-Subsystem for Linux (WSL). Like most of my posts, this is more a reminder to myself on how to do it.
 
 First of all, we'll need to generate a pair of SSH keys[^1]. So we run the following command in bash to create an SSH key-pair using the Ed25519-algorithm:
 
@@ -27,12 +27,6 @@ chmod 600 ~/.ssh/id_ed25519.pub
 chmod 600 /path/to/other/key/file
 ```
 
-Next, we're editing the SSH config-file:
-
-```bash
-nano ~/.ssh/config
-```
-
 Next, we're editing our `~/.ssh/config`. We're adding the host that we want to connect to, as well as the preffered authentication mode and the path to our private key:
 
 ```text
@@ -49,7 +43,7 @@ eval $(ssh-agent -s)
 ssh -T git@github.com
 ```
 
-However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^4] [^5], which we probably need to install first:
+However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^4][^5], which we probably need to install first:
 
 ```bash
 sudo apt-get install keychain
@@ -69,4 +63,3 @@ If you now open the terminal the first time after a reboot, the SSH-agent will b
 [^3]: [Local SSH file and folder permissions#](https://code.visualstudio.com/docs/remote/troubleshooting#_local-ssh-file-and-folder-permissions)
 [^4]: [Using SSH-Agent the right way in Windows 10 WSL2](https://esc.sh/blog/ssh-agent-windows10-wsl2/)
 [^5]: [git extension in vscode in WSL window via SSH not working](https://stackoverflow.com/questions/69584056/git-extension-in-vscode-in-wsl-window-via-ssh-not-working)
-
