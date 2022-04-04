@@ -7,18 +7,18 @@ tags: [linux, wsl, ssh, git]
 
 No, this is no April Fools' Day joke. Instead I'll show you how to correctly set-up the SSH-agent in the Windows-Subsystem for Linux as it can be a bit tricky. Like most of my posts, this is more a reminder to myself on how to do it.
 
-First of all, we'll need to generate a pair of SSH keys, like also described in [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation). So we run the following command in bash to create an SSH key-pair using the Ed25519-algorithm:
+First of all, we'll need to generate a pair of SSH keys[^1]. So we run the following command in bash to create an SSH key-pair using the Ed25519-algorithm:
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-You will be prompted for a passphrase. Although setting a passphrase is recommended for most scenarios, there are some problems with it if you're using Git in WSL2 with SSH via Visual Studio Code, e.g. the GUI-buttons in the "Source Control"-Tab for syncing a repo will not work proberly. Therefore, the VS Code developers recommend either using the command line for pulling/pushing, removing the passphrase from the SSH key or use HTTPS for cloning (as described [here](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-hangs-when-doing-a-git-push-or-sync-from-wsl)).
+You will be prompted for a passphrase. Although setting a passphrase is recommended for most scenarios, there are some problems with it if you're using Git in WSL2 with SSH via Visual Studio Code, e.g. the GUI-buttons in the "Source Control"-Tab for syncing a repo will not work proberly. Therefore, the VS Code developers recommend either using the command line for pulling/pushing, removing the passphrase from the SSH key or use HTTPS for cloning[^2].
 As this is my setup, I'll deliberately NOT set a passphrase. However, I'll recommend reading the following article on this topic: [Is it okay to use a SSH key with an empty passphrase?](https://serverfault.com/questions/142959/is-it-okay-to-use-a-ssh-key-with-an-empty-passphrase/142963#142963).
 
 If you want to share the genrated SSH keys between WSL and Windows, I'll recommend the following article: [Sharing SSH keys between Windows and WSL 2](https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/)
-(
-As also pointed out in the article about sharing SSH keys, the SSH-agent is very picky about local file and folder permissions. So make sure that they are set correctly (as also described [here](https://code.visualstudio.com/docs/remote/troubleshooting#_local-ssh-file-and-folder-permissions)):
+
+As also pointed out in the article about sharing SSH keys, the SSH-agent is very picky about local file and folder permissions. So make sure that they are set correctly[^3]:
 
 ```bash
 chmod 700 ~/.ssh
@@ -33,7 +33,7 @@ Next, we're editing the SSH config-file:
 nano ~/.ssh/config
 ```
 
-We're adding the host that we want to connect to, as well as the preffered authentication mode and the path to our private key:
+Next, we're editing our `~/.ssh/config`. We're adding the host that we want to connect to, as well as the preffered authentication mode and the path to our private key:
 
 ```text
 # GitHub
@@ -49,7 +49,7 @@ eval $(ssh-agent -s)
 ssh -T git@github.com
 ```
 
-However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^1][^2], which we probably need to install first:
+However, the session of the SSH-agent will not persist when opening a new terminal window or closing the last one. Therefore we will use a tool called `keychain`[^4] [^5], which we probably need to install first:
 
 ```bash
 sudo apt-get install keychain
@@ -64,6 +64,9 @@ Host github.com
   IdentityFile ~/.ssh/id_ed25519
 ```
 
-[^1]: [Using SSH-Agent the right way in Windows 10 WSL2](https://esc.sh/blog/ssh-agent-windows10-wsl2/)
-[^2]: [git extension in vscode in WSL window via SSH not working](https://stackoverflow.com/questions/69584056/git-extension-in-vscode-in-wsl-window-via-ssh-not-working)
+[^1]: [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation)
+[^2]: [Resolving hangs when doing a Git push or sync from WSL](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-hangs-when-doing-a-git-push-or-sync-from-wsl)
+[^3]: [Local SSH file and folder permissions#](https://code.visualstudio.com/docs/remote/troubleshooting#_local-ssh-file-and-folder-permissions)
+[^4]: [Using SSH-Agent the right way in Windows 10 WSL2](https://esc.sh/blog/ssh-agent-windows10-wsl2/)
+[^5]: [git extension in vscode in WSL window via SSH not working](https://stackoverflow.com/questions/69584056/git-extension-in-vscode-in-wsl-window-via-ssh-not-working)
 
