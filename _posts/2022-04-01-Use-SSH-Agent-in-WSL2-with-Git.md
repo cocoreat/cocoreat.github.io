@@ -77,8 +77,8 @@ If you now open the terminal the first time after a reboot, the SSH-agent will b
 Footnotes
 ---------
 
-[^1]: [About SSH key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation)
-[^2]: [Resolving hangs when doing a Git push or sync from WSL](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-hangs-when-doing-a-git-push-or-sync-from-wsl)
-[^3]: [Local SSH file and folder permissions#](https://code.visualstudio.com/docs/remote/troubleshooting#_local-ssh-file-and-folder-permissions)
-[^4]: [Using SSH-Agent the right way in Windows 10 WSL2](https://esc.sh/blog/ssh-agent-windows10-wsl2/)
+[^1]: [About SSH key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#about-ssh-key-generation)  
+[^2]: [Resolving hangs when doing a Git push or sync from WSL](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-hangs-when-doing-a-git-push-or-sync-from-wsl)  
+[^3]: [Local SSH file and folder permissions#](https://code.visualstudio.com/docs/remote/troubleshooting#_local-ssh-file-and-folder-permissions)  
+[^4]: [Using SSH-Agent the right way in Windows 10 WSL2](https://esc.sh/blog/ssh-agent-windows10-wsl2/)  
 [^5]: [Git extension in vscode in WSL window via SSH not working](https://stackoverflow.com/questions/69584056/git-extension-in-vscode-in-wsl-window-via-ssh-not-working)
